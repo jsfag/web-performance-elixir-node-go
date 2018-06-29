@@ -100,7 +100,7 @@ Transfer/sec:      4.38MB
 
 > Sysctl tuning
 ```
-wrk -t100 -c100 -d60s http://127.0.0.1:3000
+wrk -t100 -c500 -d60s http://127.0.0.1:3000
 ```
 ### Elixir (Cowboy)
 ```
