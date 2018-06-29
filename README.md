@@ -97,3 +97,45 @@ Running 1m test @ http://127.0.0.1:3000
 Requests/sec:  37937.35
 Transfer/sec:      4.38MB
 ```
+
+> Sysctl tuning
+```
+wrk -t100 -c100 -d60s http://127.0.0.1:3000
+```
+### Elixir (Cowboy)
+```
+Running 1m test @ http://127.0.0.1:3000
+  100 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    23.14ms  126.63ms   1.98s    98.46%
+    Req/Sec   345.13    219.49     0.94k    60.95%
+  1019091 requests in 1.00m, 144.02MB read
+  Socket errors: connect 0, read 0, write 0, timeout 9713
+Requests/sec:  16966.94
+Transfer/sec:      2.40MB
+```
+
+### Node.js
+```
+Running 1m test @ http://127.0.0.1:3000
+  100 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    20.62ms    0.92ms  53.12ms   95.56%
+    Req/Sec   243.31     20.86     2.49k    84.97%
+  1456059 requests in 1.00m, 144.42MB read
+Requests/sec:  24227.45
+Transfer/sec:      2.40MB
+```
+
+### Golang
+```
+Running 1m test @ http://127.0.0.1:3000
+  100 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   253.47ms  406.89ms   2.00s    83.89%
+    Req/Sec   762.44      2.41k   21.09k    92.56%
+  2458523 requests in 1.00m, 283.70MB read
+  Socket errors: connect 0, read 0, write 0, timeout 2177
+Requests/sec:  40922.28
+Transfer/sec:      4.72MB
+```
