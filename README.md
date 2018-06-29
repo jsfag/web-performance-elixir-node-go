@@ -1,5 +1,5 @@
 # web-performance-elixir-node-go
-### Elixir (cowboy) vs. Native Node.js vs. Native Golang
+### Elixir (Cowboy) vs. Native Node.js vs. Native Golang
 ## Setup
 ### Elixir:
 ```
@@ -20,7 +20,7 @@ go build main.go
 ```
 wrk -t100 -c500 -d60s http://127.0.0.1:3000
 ```
-### Elixir
+### Elixir (Cowboy)
 ```
 Running 1m test @ http://127.0.0.1:3000
   100 threads and 500 connections
