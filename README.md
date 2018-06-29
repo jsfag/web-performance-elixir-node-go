@@ -57,3 +57,43 @@ Running 1m test @ http://127.0.0.1:3000
 Requests/sec:  36931.45
 Transfer/sec:      4.26MB
 ```
+
+```
+wrk -t100 -c100 -d60s http://127.0.0.1:3000
+```
+### Elixir (Cowboy)
+```
+Running 1m test @ http://127.0.0.1:3000
+  100 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.63ms   21.94ms 157.82ms   89.86%
+    Req/Sec   167.86     60.34     1.52k    49.92%
+  997178 requests in 1.00m, 140.93MB read
+Requests/sec:  16604.10
+Transfer/sec:      2.35MB
+```
+
+### Node.js
+```
+Running 1m test @ http://127.0.0.1:3000
+  100 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.94ms  493.88us  24.95ms   98.35%
+    Req/Sec   255.40     43.27     7.37k    98.94%
+  1526803 requests in 1.00m, 151.43MB read
+Requests/sec:  25404.54
+Transfer/sec:      2.52MB
+
+```
+
+### Golang
+```
+Running 1m test @ http://127.0.0.1:3000
+  100 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    45.39ms   83.46ms   1.05s    88.09%
+    Req/Sec   440.95      1.49k   19.12k    93.69%
+  2278721 requests in 1.00m, 262.95MB read
+Requests/sec:  37937.35
+Transfer/sec:      4.38MB
+```
